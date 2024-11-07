@@ -116,7 +116,7 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 echo 'Blue Rental Cars Deploying'
-                sh """
+                sh """ 
                     cd Task-4-Solution/kub_manifest
                     sed -i 's/127.0.0.1/${NODE_IP}/g' /var/lib/jenkins/kubeconfig.yaml
                     export KUBECONFIG=/var/lib/jenkins/kubeconfig.yaml
