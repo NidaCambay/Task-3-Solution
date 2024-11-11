@@ -25,7 +25,7 @@ pipeline {
                 sh """
                     docker build --force-rm -t "${IMAGE_TAG_FE}" "${WORKSPACE}/Task-5-Solution/bluerentalcars-frontend"
                     docker build --force-rm -t "${IMAGE_TAG_BE}" "${WORKSPACE}/Task-5-Solution/bluerentalcars-backend"
-                    docker build --force-rm -t "${IMAGE_TAG_DB}" "${WORKSPACE}/postgresql"
+                    docker build --force-rm -t "${IMAGE_TAG_DB}" "${WORKSPACE}/Task-5-Solution/postgresql"
                     docker image ls
                 """
             }
